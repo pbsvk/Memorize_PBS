@@ -10,12 +10,56 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            ZStack
+            {
+                RoundedRectangle(cornerRadius: 50, style: .continuous)
+                    .frame(width:230 , height: 70, alignment: .topLeading)
+                Text("Memorize")
+                    .font(.largeTitle)
+                    .foregroundStyle(
+                        AngularGradient(
+                            gradient: Gradient(colors: [.red, .orange, .yellow, .green, .blue, .purple]),
+                            center: .center
+                        )
+                    )
+                    .fontWeight(.heavy)
+            }
+            Spacer()
+            Theme1View()
+            Spacer()
+            HStack{
+                Button("Theme_1", systemImage: "lanyardcard.fill", action: {
+                    print("clicked")
+                })
+                .padding()
+                .labelStyle(.iconOnly)
+                .font(.largeTitle)
+                .foregroundStyle(Color.red)
+                
+                
+                Button("Theme_1", systemImage: "lanyardcard.fill", action: {
+                    print("clicked")
+                })
+                .padding()
+                .labelStyle(.iconOnly)
+                .font(.largeTitle)
+                .foregroundStyle(Color.green)
+                Button("Theme_1", systemImage: "lanyardcard.fill", action: {
+                    print("clicked")
+                })
+                .padding()
+                .labelStyle(.iconOnly)
+                .font(.largeTitle)
+                .foregroundStyle(Color.blue)
+
+            }
+            
+            
+            
+            
+            
         }
-        .padding()
     }
 }
 
